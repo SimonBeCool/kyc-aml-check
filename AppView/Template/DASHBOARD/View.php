@@ -1,12 +1,47 @@
 <?php 
-$config = new Config();
-$host = $config->read('mysql','host');
-$pass = $config->read('mysql','pass');
-$user = $config->read('mysql','user');
-$data = $config->read('mysql','data');
+/*
 
-$db = new Database($host, $pass, $user, $data);
+    @author : Simon Bucher
+    @nameof : KYC-CHECK-AML
+
+*/
+
+$config = new Config();
 
 ?>
 
-Hallo
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><?php echo $config->read('app','title'); ?></title>
+        <meta name="description" content="<?php echo $config->read('app','description'); ?>">
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="<?php echo $config->read('app','css'); ?>web.css">
+        <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="kyc-full">
+            <kyc-sidebar class="lite-white normal-shadows">
+                <div class="kyc-full"><div class="logo f23 yellow-font">{LOGO}</div></div>
+                <section class="desc yellow-font">PLACEHOLDER</section>
+                <a href="#menu1"><under-section class="desc white-font">PLACEHOLDER 1</under-section></a>
+                <a href="#menu2"><under-section class="desc white-font">PLACEHOLDER 2</under-section></a>
+                <a href="#menu3"><under-section class="desc white-font">PLACEHOLDER 3</under-section></a>
+                <section class="desc yellow-font">PLACEHOLDER</section>
+                <a href="#menu1"><under-section class="desc white-font">PLACEHOLDER 1</under-section></a>
+                <a href="#menu2"><under-section class="desc white-font">PLACEHOLDER 2</under-section></a>
+                <a href="#menu3"><under-section class="desc white-font">PLACEHOLDER 3</under-section></a>
+            </kyc-sidebar>
+            <div class="kyc-main-normal">
+                <h2 class="white-font">BASIC BOX</h2>
+                <full-box class="lite-white normal-shadow white-font"><div class="clear"></div></full-box>
+
+                <h2 class="white-font">RIG 2 BOXEN</h2>
+                <rig-2-nopad2><full-box class="lite-white normal-shadow white-font"><div class="clear"></div></full-box></rig-2-nopad2>
+                <rig-2-clear></rig-2-clear>
+                <rig-2-nopad2><full-box class="lite-white normal-shadow white-font"><div class="clear"></div></full-box></rig-2-nopad2>
+            </div>
+        </div>
+    </body>
+</html>

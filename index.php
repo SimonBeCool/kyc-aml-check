@@ -26,6 +26,7 @@ include $_SERVER['DOCUMENT_ROOT'].$config->read('routing','core').'route.class.p
 $routes = new routes();
 $routes->addRoute("", "/", $config->read('routing','template')."Login/View.php", true, true);
 $routes->addRoute("index", "/index", $config->read('routing','template')."Login/View.php", true, true);
+$routes->addRoute("dashboard", "/dashboard", $config->read('routing','template')."Dashboard/View.php", true, true);
 
 
 // PROCEED OR ERROR HANDLER
