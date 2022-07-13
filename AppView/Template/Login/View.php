@@ -29,16 +29,30 @@ $config = new Config();
                         <div class="desc white-font">E-MAIL</div>
                         <input class="normal-shadow"  type="email" >
                         <div class="desc white-font">PASSWORD</div>
-                        <input class="normal-shadow" type="password" >
+                        <input class="normal-shadow" type="password">
+
+                        <div class="clear"></div>
+
                         <div class="desc white-font">CAPTCHA</div>
-                        <input class="log-green white-font normal-shadow f500 f16"  type="submit" value="EINLOGGEN">
+                        <div class="h-captcha" data-sitekey="6b98beab-5dba-4311-ba57-c0ddc7fe6a68"></div>
+                        <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+                        <input class="log-green white-font normal-shadow f500 f16 no-top-bot"  type="submit" value="EINLOGGEN">
                     </form>
                 </rig-2>
-                <rig-2-nopad>
+                <rig-2>
                     <img src="https://www.kyc3.com/wp-content/uploads/What-is-KYC-illustration.png" style="max-width:100%;" alt="Background">
                     <input class="lite-yellow white-font normal-shadow f500 f16"  type="submit" value="{PLACEHOLDER}">
-                </rig-2-nopad>
+                </rig-2>
             </full-box>
         </div>
+        <script>
+            token = request.POST["h-captcha-response"]
+            params = {
+            "secret": "0x9a7be5Df907978dE1bFCbccc715941978E73a97e",
+            "response": token
+            }
+            json = http.POST("https://hcaptcha.com/siteverify", params)
+        </script>
     </body>
 </html>
