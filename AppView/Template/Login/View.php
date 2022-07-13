@@ -27,9 +27,9 @@ $config = new Config();
                     <h2 class="white-font">KYC-AML-CHECK EINLOGGEN</h2>
                     <form autocomplete="off" method="POST">
                         <div class="desc white-font">E-MAIL</div>
-                        <input class="normal-shadow"  type="email" >
+                        <input class="normal-shadow white-font f400 f16"  type="email" >
                         <div class="desc white-font">PASSWORD</div>
-                        <input class="normal-shadow" type="password">
+                        <input class="normal-shadow white-font f400 f16" type="password">
 
                         <div class="clear"></div>
 
@@ -37,14 +37,15 @@ $config = new Config();
                         <div class="h-captcha" data-sitekey="6b98beab-5dba-4311-ba57-c0ddc7fe6a68"></div>
                         <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
-                        <input class="log-green white-font normal-shadow f500 f16 no-top-bot"  type="submit" value="EINLOGGEN">
+                        <input class="log-green white-font normal-shadow f500 f16 no-top-bot"  type="submit" value="SIGN IN">
                     </form>
                 </rig-2>
                 <rig-2>
                     <img src="https://www.kyc3.com/wp-content/uploads/What-is-KYC-illustration.png" style="max-width:100%;" alt="Background">
-                    <input class="lite-yellow white-font normal-shadow f500 f16"  type="submit" value="{PLACEHOLDER}">
+                    <input class="lite-yellow white-font normal-shadow f500 f16"  type="submit" value="SIGN UP ON KYC-ALM-CHECK">
                 </rig-2>
             </full-box>
+            <div class="copyright white-font f400 f14">&copy; KYC-AML_CHECK 2022 is a product from Simon Bucher</div>
         </div>
         <script>
             token = request.POST["h-captcha-response"]
