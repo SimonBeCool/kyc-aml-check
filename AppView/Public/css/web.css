@@ -1,0 +1,48 @@
+
+/* MAIN */
+body {background: #18242e !important;margin: 0 auto;font-family: 'Gemunu Libre';}
+
+
+/* MAIN */
+.kyc-main{width:1080px;margin:0 auto;top: 280px;position: relative;}
+
+/* SIZE BOX */
+full-box{width: 100%;height: auto;float:left;}
+
+/* FONT SIZE */
+h2{float: left;width: 100%;font-weight: 500;}
+.desc{font-size: 16px;float: left;width: 100%;}
+.f14{font-size: 14px;}
+.f16{font-size: 16px;}
+.f18{font-size: 18px;}
+.f20{font-size: 20px;}
+.f23{font-size: 23px;}
+
+/* FONT WEIGHT */
+.f300{font-weight: 300;}
+.f400{font-weight: 400;}
+.f500{font-weight: 500;}
+.f600{font-weight: 600;}
+.f700{font-weight: 700;}
+
+/* RIG */
+rig-2{width: 510px;height: auto;float: left;padding:15px;}
+rig-2-nopad{width: 540px;height: auto;float: left;}
+
+/* IMAGE SIZE */
+img{filter: drop-shadow(5px 5px 10px #000);}
+
+/* Background Colors */
+.lite-white{background: #ffffff0f;}
+.log-green{background: #42bf7a;}
+.lite-yellow{background: rgb(231 166 50);}
+
+/* Box Shadows */
+.normal-shadow{box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);}
+
+/* FONT COLOR */
+.white-font{color: #fff;text-shadow: 1px 1px 3px #000000d4;}
+
+/* INPUT */
+input {float: left;width: 100%;background: #00000054;height: 40px;border: 1px solid #ffffff1f;margin-top: 10px;margin-bottom: 10px;font-family: 'Gemunu Libre';}
+

@@ -1,4 +1,10 @@
 <?php
+/*
+
+    @author : Simon Bucher
+    @nameof : KYC-CHECK-AML
+
+*/
 
 class Database{
   private $db;

@@ -1,4 +1,11 @@
 <?php
+/*
+
+    @author : Simon Bucher
+    @nameof : KYC-CHECK-AML
+
+*/
+
 class Config{
 	private $config = null;
 	function read($main, $sub){
@@ -16,11 +23,11 @@ class Config{
 			],
 			'app' => [
 				'404' => '',
-				'css' => './AppView/css/',
-				'js' => './AppView/js/',
-				'images' => './AppView/images/',
-				'title' => 'Document-Check | The nice way to proof files.',
-				'description' => 'Document-Check is a platform to proof files easy and fast.',
+				'css' => './AppView/Public/css/',
+				'js' => './AppView/Public/js/',
+				'images' => './AppView/Public/images/',
+				'title' => 'KYC-AML-CHECK | The nice way to proof files.',
+				'description' => 'KYC-AML-CHECK is a platform to proof files easy and fast.',
 			],
 		];
 		return $config[$main][$sub];
