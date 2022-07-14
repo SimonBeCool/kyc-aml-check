@@ -1,0 +1,4 @@
+
+12.07.2022 von 15:30 bis 17:30 | 2 Stunden | CMS Base ( routing-system, configuration file, stable mysql connection ).
+13.07.2022 von 12:00 bis 16:00 | 4 Stunden | Login Template & Dashboard Base 
+14.07.2022 von 10:30 bis 14:30 | 4 Stunden | Fontawesome added + some added things + color update + language-plugin added + some upgrades

@@ -1,11 +1,31 @@
 
 /* MAIN */
 body {background: #18242e !important;margin: 0 auto;font-family: 'Gemunu Libre';}
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 0;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
 
 
 /* MAIN */
 .kyc-main{width:1080px;margin:0 auto;top: 280px;position: relative;}
-.kyc-main-normal{width:920px;margin:0 auto;top: 80px;position: relative;}
+.kyc-main-normal{max-width:920px;margin:0 auto;position: relative;overflow-y: scroll;}
+.kyc-main-normal:after {content: "";display: table;clear: both;}
 .kyc-full{width:100%;margin:0 auto;position: relative;}
 .logo{margin-top: 80px;text-align: center;margin-bottom: 60px;}
 
@@ -17,13 +37,16 @@ kyc-sidebar{height: 100%; width: 300px; float: left;padding: 0px 15px;}
 section{float: left;margin-top: 10px;margin-bottom: 10px;width: 100%;}
 under-section{float: left;margin-top: 10px;margin-bottom: 10px;width: 100%;text-align: center;}
 under-section:hover{color: rgb(255 206 117);text-shadow: 1px 1px 3px #000000d4;}
-action-tab{height: 40px;width: 100%;text-align: center;color: #fff;float: left;line-height: 40px;}
-action-tab:hover{color: rgb(255 206 117);text-shadow: 1px 1px 3px #000000d4;}
-action-tab > i{position: relative;margin-right: 10px;top: 0px;}
+action-tab{height: 40px;width: 92%;text-align: center;color: #fff;float: left;line-height: 40px;margin-bottom: 10px;padding: 0px 10px;}
+action-tab:hover{color: rgb(255 206 117);text-shadow: 1px 1px 3px #000000d4;background: #00000042;padding: 0px 10px;border: 1px solid #ffffff29;}
+action-tab > i{position: relative;margin-right: 10px;top: 0px;float: left;line-height: 40px !important;}
 .clear-sidebar{float:left;height:40px;width: 100%;}
 
 /* FONT SIZE */
 h2{float: left;width: 100%;font-weight: 500;}
+h2-dash{float: left;width: 100%;font-weight: 500;margin-top: 80px;}
+h2-info{float: left;width: 100%;font-weight: 500;margin-top: 5px;margin-bottom: 15px;}
+h2-info > i{position: relative;margin-right: 10px;}
 .desc{font-size: 16px;float: left;width: 100%;}
 .desc > i{position: relative;margin-right: 10px;top: 1px;}
 .f14{font-size: 14px;}
@@ -70,3 +93,15 @@ input {float: left;width: 100%;background: #00000054;height: 40px;border: 1px so
 .clear{float:left; margin-top: 14px; width: 100%;}
 .h-captcha{float:left; margin-top: 10px;}
 .copyright{float:left; width:100%;margin-top: 20px;}
+
+
+/* 
+@media only screen and (min-width: 200px) and (max-width: 920px)  {
+    .kyc-main-normal{width: 100%!important;margin:0 auto;top: 80px;position: relative;}
+	full-box{Width: 100%!important;height: auto;float:left;}
+    rig-2{min-width: 250px;height: auto;float: left;padding:15px;}
+    rig-2-nopad{min-width: 250px;height: auto;float: left;}
+    rig-2-nopad2{min-width: 250px;height: auto;float: left;}
+    rig-2-clear{float:left;width: 40px;height: 10px;}
+}
+*/

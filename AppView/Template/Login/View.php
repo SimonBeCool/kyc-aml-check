@@ -26,11 +26,11 @@ $lang = new Language();
         <div class="kyc-main">
             <full-box class="lite-white normal-shadow">
                 <rig-2>
-                    <h2 class="white-font">KYC-AML-CHECK EINLOGGEN</h2>
+                    <h2 class="white-font"><?php echo $lang->read('signin-area', $config->read('app','language')); ?></h2>
                     <form autocomplete="off" method="POST">
-                        <div class="desc white-font"><i class="fa-regular fa-envelope"></i> E-MAIL</div>
+                        <div class="desc white-font"><i class="fa-regular fa-envelope"></i> <?php echo $lang->read('email', $config->read('app','language')); ?></div>
                         <input class="normal-shadow white-font f400 f16"  type="email" >
-                        <div class="desc white-font"><i class="fa-regular fa-pen-to-square"></i> PASSWORD</div>
+                        <div class="desc white-font"><i class="fa-regular fa-pen-to-square"></i> <?php echo $lang->read('password', $config->read('app','language')); ?></div>
                         <input class="normal-shadow white-font f400 f16" type="password">
 
                         <div class="clear"></div>
