@@ -28,6 +28,7 @@ class Config{
 				'images' => './AppView/Public/images/',
 				'title' => 'KYC-AML-CHECK | The nice way to proof files.',
 				'description' => 'KYC-AML-CHECK is a platform to proof files easy and fast.',
+				'language' => 'en',
 			],
 		];
 		return $config[$main][$sub];

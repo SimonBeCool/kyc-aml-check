@@ -15,6 +15,9 @@ error_reporting(E_ALL);
 date_default_timezone_set('Europe/Berlin');
 include $_SERVER['DOCUMENT_ROOT'].'/Core/System/config.php';
 
+// PLUGINS
+include $_SERVER['DOCUMENT_ROOT'].'/Core/Plugins/lang.plugin.php';
+
 // SETUP
 $config = new Config();
 

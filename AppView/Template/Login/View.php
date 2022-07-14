@@ -7,6 +7,7 @@
 */
 
 $config = new Config();
+$lang = new Language();
 
 ?>
 
@@ -38,15 +39,15 @@ $config = new Config();
                         <div class="h-captcha" data-sitekey="6b98beab-5dba-4311-ba57-c0ddc7fe6a68"></div>
                         <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
-                        <input class="log-green white-font normal-shadow f500 f16 no-top-bot"  type="submit" value="SIGN IN">
+                        <input class="log-green white-font normal-shadow f500 f16 no-top-bot"  type="submit" value="<?php echo $lang->read('signin', $config->read('app','language')); ?>">
                     </form>
                 </rig-2>
                 <rig-2>
                     <img src="https://www.kyc3.com/wp-content/uploads/What-is-KYC-illustration.png" style="max-width:100%;" alt="Background">
-                    <input class="lite-yellow white-font normal-shadow f500 f16"  type="submit" value="SIGN UP ON KYC-ALM-CHECK">
+                    <input class="lite-yellow white-font normal-shadow f500 f16"  type="submit" value="<?php echo $lang->read('signup', $config->read('app','language')); ?>">
                 </rig-2>
             </full-box>
-            <div class="copyright white-font f300 f14">&copy; KYC-AML_CHECK 2022 by Simon Bucher</div>
+            <div class="copyright white-font f300 f14"><?php echo $lang->read('copyright', $config->read('app','language')); ?></div>
         </div>
         <script>
             token = request.POST["h-captcha-response"]
