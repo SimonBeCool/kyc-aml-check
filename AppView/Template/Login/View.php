@@ -19,6 +19,7 @@ $config = new Config();
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="stylesheet" href="<?php echo $config->read('app','css'); ?>web.css">
         <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/407d65693f.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="kyc-main">
@@ -26,14 +27,14 @@ $config = new Config();
                 <rig-2>
                     <h2 class="white-font">KYC-AML-CHECK EINLOGGEN</h2>
                     <form autocomplete="off" method="POST">
-                        <div class="desc white-font">E-MAIL</div>
+                        <div class="desc white-font"><i class="fa-regular fa-envelope"></i> E-MAIL</div>
                         <input class="normal-shadow white-font f400 f16"  type="email" >
-                        <div class="desc white-font">PASSWORD</div>
+                        <div class="desc white-font"><i class="fa-regular fa-pen-to-square"></i> PASSWORD</div>
                         <input class="normal-shadow white-font f400 f16" type="password">
 
                         <div class="clear"></div>
 
-                        <div class="desc white-font">CAPTCHA</div>
+                        <div class="desc white-font"><i class="fa-regular fa-square-check"></i> CAPTCHA</div>
                         <div class="h-captcha" data-sitekey="6b98beab-5dba-4311-ba57-c0ddc7fe6a68"></div>
                         <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
@@ -45,7 +46,7 @@ $config = new Config();
                     <input class="lite-yellow white-font normal-shadow f500 f16"  type="submit" value="SIGN UP ON KYC-ALM-CHECK">
                 </rig-2>
             </full-box>
-            <div class="copyright white-font f400 f14">&copy; KYC-AML_CHECK 2022 is a product from Simon Bucher</div>
+            <div class="copyright white-font f300 f14">&copy; KYC-AML_CHECK 2022 by Simon Bucher</div>
         </div>
         <script>
             token = request.POST["h-captcha-response"]
