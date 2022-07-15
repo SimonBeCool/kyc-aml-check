@@ -20,13 +20,15 @@ $lang = new Language();
         <link rel="stylesheet" href="<?php echo $config->read('app','css'); ?>web.css">
         <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/407d65693f.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="<?php echo $config->read('app','js'); ?>de.jqu.311.js"></script>
+        <script type="text/javascript" src="<?php echo $config->read('app','js'); ?>core.js"></script>
     </head>
     <body>
         <div class="kyc-full">
             <kyc-sidebar class="lite-white normal-shadows">
                 <div class="kyc-full"><div class="logo f23 yellow-font">{LOGO}</div></div>
-                <action-tab><i class="fa-solid fa-house"></i> <?php echo $lang->read('menu-home', $config->read('app','language')); ?></action-tab>
-                <action-tab><i class="fa-regular fa-id-badge"></i> <?php echo $lang->read('menu-profile', $config->read('app','language')); ?></action-tab>
+                <action-tab data-action="umenu" data-json='[{"type":"dashboard"}]'><i class="fa-solid fa-house"></i> <?php echo $lang->read('menu-home', $config->read('app','language')); ?></action-tab>
+                <action-tab data-action="umenu" data-json='[{"type":"profile"}]'><i class="fa-regular fa-id-badge"></i> <?php echo $lang->read('menu-profile', $config->read('app','language')); ?></action-tab>
                 <div class="clear-sidebar"></div>
                 <section class="desc yellow-font"><i class="fa-regular fa-rectangle-list"></i> PLACEHOLDER</section>
                 <a href="#menu1"><under-section class="desc grey-font f15"><i class="fa-regular fa-circle-dot"></i> PLACEHOLDER 1</under-section></a>

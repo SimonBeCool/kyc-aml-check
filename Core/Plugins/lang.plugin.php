@@ -73,6 +73,64 @@ class Language{
                 'en' => 'view projects',
             ],
 
+			/* YOUR PROFILE */
+			'profile-text' => [
+                'de' => 'DEIN PROFIL',
+				'en' => 'YOUR PROFILE',
+            ],
+            'profile-text-sub' => [
+                'de' => 'Das sind alle gesammelten Daten über Sie.',
+                'en' => 'That&apos;s all data about you.',
+            ],
+			'account-info' => [
+                'de' => 'DEINE ACCOUNT DATEN',
+				'en' => 'YOUR ACCOUNT CREDENTIALS',
+            ],
+			'account-settings' => [
+                'de' => 'DEINE ACCOUNT EINSTELLUNGEN',
+				'en' => 'YOUR ACCOUNT SETTINGS',
+            ],
+			'firstname' => [
+                'de' => 'VORNAME',
+				'en' => 'FIRST NAME',
+            ],
+            'lastname' => [
+                'de' => 'NACHNAME',
+                'en' => 'LAST NAME',
+            ],
+			'emailadress' => [
+                'de' => 'E-MAIL ADRESSE',
+				'en' => 'E-MAIL ADRESS',
+            ],
+			'nationality' => [
+                'de' => 'NATIONALITÄT',
+				'en' => 'NATIONALITY',
+            ],
+			'lifecountry' => [
+                'de' => 'DERZEITIGES LAND',
+				'en' => 'LIFE COUNTRY',
+            ],
+			'zip' => [
+                'de' => 'POSTLEITZAHL',
+				'en' => 'POST CODE / ZIP',
+            ],
+			'city' => [
+                'de' => 'STADT',
+				'en' => 'CITY',
+            ],
+			'adress' => [
+                'de' => 'WOHN ADRESSE',
+				'en' => 'HOUSE ADRESS',
+            ],
+			'birthday' => [
+                'de' => 'GEBURTSTAG',
+				'en' => 'BIRTHDAY',
+            ],
+			'age' => [
+                'de' => 'ALTER',
+				'en' => 'AGE',
+            ],
+
             /* MENU */
             'menu-profile' => [
                 'de' => 'IHR PROFIL',

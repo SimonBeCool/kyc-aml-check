@@ -30,6 +30,7 @@ $routes = new routes();
 $routes->addRoute("", "/", $config->read('routing','template')."Login/View.php", true, true);
 $routes->addRoute("index", "/index", $config->read('routing','template')."Login/View.php", true, true);
 $routes->addRoute("dashboard", "/dashboard", $config->read('routing','template')."Dashboard/View.php", true, true);
+$routes->addRoute("dashboard", "/profile", $config->read('routing','template')."Profile/View.php", true, true);
 
 
 // PROCEED OR ERROR HANDLER

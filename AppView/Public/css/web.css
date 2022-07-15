@@ -38,6 +38,16 @@ body {background: #18242e !important;margin: 0 auto;font-family: 'Gemunu Libre';
 .kyc-main-normal:after {content: "";display: table;clear: both;}
 .kyc-full{width:100%;margin:0 auto;position: relative;}
 .logo{margin-top: 80px;text-align: center;margin-bottom: 60px;}
+head-title{height: 40px; width: 100%;float:left;line-height: 40px;text-transform: uppercase;}
+head-title > i{float: right;margin-top: 10px;cursor: pointer;}
+total-count{height: 40px; width: 100%;float:left;line-height: 40px;text-transform: uppercase;margin-bottom: 15px;}
+view-button{height: 40px; width: 100%;float:left;line-height: 40px;text-transform: uppercase;text-align: center;cursor: pointer;}
+data-box{height: 40px;width:140px;float:left;margin-bottom: 10px;}
+data-box > .title{float:left;width: 100%;}
+data-box > .data{float:left;width: 100%;}
+full-data-box{height: 40px;width:100%;float:left;margin-bottom: 10px;}
+full-data-box > .title{float:left;width: 100%;}
+full-data-box > .data{float:left;width: 100%;}
 
 /* SIZE BOX */
 full-box{width: 100%;height: auto;float:left;padding: 15px;}
@@ -57,9 +67,6 @@ h2{float: left;width: 100%;font-weight: 500;}
 h2-dash{float: left;width: 100%;font-weight: 500;margin-top: 80px;}
 h2-info{float: left;width: 100%;font-weight: 500;margin-top: 5px;margin-bottom: 15px;}
 h2-info > i{position: relative;margin-right: 10px;}
-head-title{height: 40px; width: 100%;float:left;line-height: 40px;text-transform: uppercase;}
-total-count{height: 40px; width: 100%;float:left;line-height: 40px;text-transform: uppercase;margin-bottom: 15px;}
-view-button{height: 40px; width: 100%;float:left;line-height: 40px;text-transform: uppercase;text-align: center;cursor: pointer;}
 .desc{font-size: 16px;float: left;width: 100%;}
 .desc > i{position: relative;margin-right: 10px;top: 1px;}
 .f14{font-size: 14px;}
@@ -81,10 +88,21 @@ rig-2{width: 510px;height: auto;float: left;padding:15px;}
 rig-2-nopad{width: 540px;height: auto;float: left;}
 rig-2-nopad2{width: 440px;height: auto;float: left;}
 rig-2-clear{float:left;width: 40px;height: 10px;}
+
 rig-3{width: 280px;height: auto;float: left;padding:15px;}
 rig-3-nopad{width: 540px;height: auto;float: left;}
 rig-3-nopad2{width: 280px;height: auto;float: left;}
 rig-3-clear{float:left;width: 40px;height: 10px;}
+
+rig-1{width: 280px;height: auto;float: left;padding:15px;}
+rig-1-nopad{width: 540px;height: auto;float: left;}
+rig-1-nopad2{width: 280px;height: auto;float: left;}
+rig-1-clear{float:left;width: 40px;height: 10px;}
+
+rig-1-big{width: 510px;height: auto;float: left;padding:15px;}
+rig-1-big-nopad{width: 540px;height: auto;float: left;}
+rig-1-big-nopad2{width: 600px;height: auto;float: left;}
+
 
 /* IMAGE SIZE */
 img{filter: drop-shadow(5px 5px 10px #000);}
