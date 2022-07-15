@@ -15,6 +15,10 @@ $(document).ready(function(){
         window.location.replace("./"+ link);
     });
 
+    $(document).on('click', '[data-action="test-switch"]', function(e) {
+        console.log('activated/deactivated');
+    });
+
 });
 
 	

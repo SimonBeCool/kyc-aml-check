@@ -92,7 +92,14 @@ $lang = new Language();
                 <rig-1-clear></rig-1-clear>
                 <rig-1-big-nopad2>
                     <full-box class="lite-white normal-shadow white-font">
-                        <head-title><?php echo $lang->read('account-settings', $config->read('app','language')); ?> <i class="fa-solid fa-user-pen"></i></head-title>
+                        <head-title><?php echo $lang->read('account-settings', $config->read('app','language')); ?> </head-title>
+                        <head-title>
+                            TEST FUNCTION SWITCH
+                            <label class="toggle" for="myToggle">
+                                <input class="toggle__input" name="" type="checkbox" id="myToggle" data-action="test-switch">
+                                <div class="toggle__fill"></div>
+                            </label>
+                        </head-title>
                     </full-box>
                 </rig-1-big-nopad2>
             </div>
