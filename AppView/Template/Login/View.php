@@ -24,6 +24,7 @@ $lang = new Language();
     </head>
     <body>
         <div class="kyc-main">
+        <div class="kyc-logo"></div>
             <full-box class="lite-white normal-shadow">
                 <rig-2>
                     <h2 class="white-font"><?php echo $lang->read('signin-area', $config->read('app','language')); ?></h2>

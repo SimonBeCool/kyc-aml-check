@@ -35,13 +35,42 @@ class Language{
 				'de' => '© KYC-AML_CHECK 2022 von Simon Bucher',
 				'en' => '© KYC-AML_CHECK 2022 by Simon Bucher',
 			],
-            'welcome' => [
+			/* DASHBOARD */
+			'welcome' => [
                 'de' => 'Willkommen {USERNAME}!',
 				'en' => 'Welcome {USERNAME}!',
             ],
             'welcome-sub' => [
                 'de' => 'Sie haben sich in KYC-AML-CHECK eingeloggt.',
                 'en' => 'You&apos;ve logged in to KYC-AML-CHECK.',
+            ],
+			'total-investors' => [
+                'de' => 'INVESTOREN INSGESAMT',
+                'en' => 'TOTAL INVESTORS',
+            ],
+            'total-issues' => [
+                'de' => 'RÜCKGÄNGE INSGESAMT',
+                'en' => 'TOTAL ISSUES',
+            ],
+			'total-projects' => [
+                'de' => 'PROJEKTE INSGESAMT',
+                'en' => 'TOTAL PROJECTS',
+            ],
+            'recent-subscriptions' => [
+                'de' => 'LETZTE INVESTITIONEN',
+                'en' => 'RECENT SUBSCRIPTIONS',
+            ],
+			'view-investors' => [
+                'de' => 'alle investoren',
+                'en' => 'view investors',
+            ],
+            'view-issues' => [
+                'de' => 'alle rückgänge',
+                'en' => 'view issues',
+            ],
+			'view-projects' => [
+                'de' => 'alle projekte',
+                'en' => 'view projects',
             ],
 
             /* MENU */

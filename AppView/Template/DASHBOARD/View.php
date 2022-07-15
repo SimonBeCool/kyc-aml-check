@@ -37,15 +37,37 @@ $lang = new Language();
                 <a href="#menu2"><under-section class="desc grey-font f15"><i class="fa-regular fa-circle-dot"></i> PLACEHOLDER 2</under-section></a>
                 <a href="#menu3"><under-section class="desc grey-font f15"><i class="fa-regular fa-circle-dot"></i> PLACEHOLDER 3</under-section></a>
             </kyc-sidebar>
+
             <div class="kyc-main-normal">
                 <h2-dash class="white-font f23"><?php echo $lang->read('welcome', $config->read('app','language')); ?></h2-dash>
                 <h2-info class="grey-font f14"><i class="fa-solid fa-circle-info"></i> <?php echo $lang->read('welcome-sub', $config->read('app','language')); ?></h2-info>
-                <full-box class="lite-white normal-shadow white-font"><div class="clear"></div></full-box>
+                <rig-3-nopad2>
+                    <full-box class="lite-white normal-shadow white-font">
+                        <head-title><?php echo $lang->read('total-investors', $config->read('app','language')); ?></head-title>
+                        <total-count class="f23 f600">0</total-count>
+                        <view-button class="lite-yellow"><?php echo $lang->read('view-investors', $config->read('app','language')); ?></view-button>
+                    </full-box>
+                </rig-3-nopad2>
+                <rig-3-clear></rig-3-clear>
+                <rig-3-nopad2>
+                    <full-box class="lite-white normal-shadow white-font">
+                        <head-title><?php echo $lang->read('total-issues', $config->read('app','language')); ?></head-title>
+                        <total-count class="f23 f600">0</total-count>
+                        <view-button class="lite-yellow"><?php echo $lang->read('view-issues', $config->read('app','language')); ?></view-button>
+                    </full-box>
+                </rig-3-nopad2>
+                <rig-3-clear></rig-3-clear>
+                <rig-3-nopad2>
+                    <full-box class="lite-white normal-shadow white-font">
+                        <head-title><?php echo $lang->read('total-projects', $config->read('app','language')); ?></head-title>
+                        <total-count class="f23 f600">0</total-count>
+                        <view-button class="lite-yellow"><?php echo $lang->read('view-projects', $config->read('app','language')); ?></view-button>
+                    </full-box>
+                </rig-3-nopad2>
+                
 
-                <h2 class="white-font">RIG 2 BOXEN</h2>
-                <rig-2-nopad2><full-box class="lite-white normal-shadow white-font"><div class="clear"></div></full-box></rig-2-nopad2>
-                <rig-2-clear></rig-2-clear>
-                <rig-2-nopad2><full-box class="lite-white normal-shadow white-font"><div class="clear"></div></full-box></rig-2-nopad2>
+                <h2 class="white-font"><?php echo $lang->read('recent-subscriptions', $config->read('app','language')); ?></h2>
+                <full-box class="lite-white normal-shadow white-font"><div class="clear"></div></full-box>
             </div>
         </div>
     </body>
