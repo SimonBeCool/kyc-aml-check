@@ -1,6 +1,6 @@
 
 /* MAIN */
-body {background: #14151c !important;margin: 0 auto;font-family: 'Gemunu Libre';}
+body {background: #1c1d23 !important;margin: 0 auto;font-family: 'Open Sans';}
 /* width */
 ::-webkit-scrollbar {
     width: 0px;
@@ -56,9 +56,10 @@ full-box{width: 100%;height: auto;float:left;padding: 15px;}
 kyc-sidebar{height: 100%; width: 300px; float: left;padding: 0px 15px;}
 section{float: left;margin-top: 10px;margin-bottom: 10px;width: 100%;}
 under-section{float: left;margin-top: 10px;margin-bottom: 10px;width: 100%;text-align: center;}
-under-section:hover{color: rgb(255 206 117);text-shadow: 1px 1px 3px #000000d4;}
+under-section:hover{color: #43e59c;text-shadow: 1px 1px 3px #000000d4;}
 action-tab{height: 40px;width: 92%;text-align: center;color: #fff;float: left;line-height: 40px;margin-bottom: 10px;padding: 0px 10px;}
-action-tab:hover{color: rgb(255 206 117);text-shadow: 1px 1px 3px #000000d4;background: #00000042;padding: 0px 10px;cursor:pointer;}
+action-tab:hover{color: #43e59c;text-shadow: 1px 1px 3px #000000d4;background: #00000042;padding: 0px 10px;cursor:pointer;}
+.active{background: #00000042;color: #43e59c;}
 action-tab > i{position: relative;margin-right: 10px;top: 0px;float: left;line-height: 40px !important;}
 .clear-sidebar{float:left;height:40px;width: 100%;}
 
@@ -108,9 +109,9 @@ rig-1-big-nopad2{width: 600px;height: auto;float: left;}
 img{filter: drop-shadow(5px 5px 10px #000);}
 
 /* Background Colors */
-.lite-white{background: #ffffff0f;}
-.log-green{background: #5ff356}
-.lite-yellow{background: rgb(191 158 90)}
+.lite-white{background: #14151b;}
+.log-green{background: #49b584}
+.lite-yellow{background: rgb(229 149 67)}
 
 /* Box Shadows */
 .normal-shadow{box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);}
@@ -118,10 +119,11 @@ img{filter: drop-shadow(5px 5px 10px #000);}
 /* FONT COLOR */
 .white-font{color: #fff;text-shadow: 1px 1px 3px #000000d4;}
 .yellow-font{color: rgb(255 206 117);text-shadow: 1px 1px 3px #000000d4;}
-.grey-font{color: #b1b1b1;text-shadow: 1px 1px 3px #000000d4;}
+.grey-font{color: #ebebeb;text-shadow: 1px 1px 3px #000000d4;}
+.green-font{color: #43e59c;text-shadow: 1px 1px 3px #000000d4;}
 
 /* INPUT */
-input {float: left;width: 100%;background: #00000054;height: 50px;border: 1px solid #ffffff1f;margin-top: 10px;margin-bottom: 10px;font-family: 'Gemunu Libre';padding: 0px 15px;}
+input {float: left;width: 100%;background: #00000054;height: 50px;border: 1px solid #ffffff1f;margin-top: 10px;margin-bottom: 10px;font-family: 'Open Sans';padding: 0px 15px;}
 .no-top-bot{margin-top: 10px;margin-bottom: 0px;}
 
 /* Other */
