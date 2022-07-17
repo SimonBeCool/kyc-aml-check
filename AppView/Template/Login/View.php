@@ -8,6 +8,32 @@
 
 $config = new Config();
 $lang = new Language();
+$data = new Database($config->read('mysql','host'), $config->read('mysql','pass'), $config->read('mysql','user'), $config->read('mysql','data'));
+                    
+if(isset($_POST['username'], $_POST['password'])) {
+    if (empty($_POST['username']) && empty($_POST['password'])) {
+        echo '<div class="alert">Bitte f&uuml;lle alle Felder aus!</div>';
+    } else {
+        $username = htmlspecialchars($_POST['username']);
+        $password = htmlspecialchars($_POST['password']);
+                        
+        $stage1 = $data->getQuery("users", "email = '".$username."'"); 
+		if($stage1 != ''){
+            $db = $data->getQuery("users", "email = '".$username."'");
+            $output = $db->fetchObject();
+            $timestamp = time();
+            if(htmlspecialchars($output->email) === $username && password_verify($password, htmlspecialchars($output->password))){
+                // LOGIN ACCEPT
+                $_SESSION['login_algo'] = $output->id;
+                header('Location: /dashboard');
+            } else {
+                // LOGIN FAILED BECAUSE WRONG PASSWORD OR EMAIL
+            }
+        } else {
+            // NOT EXISTING
+        }
+	}
+}
 
 ?>
 
@@ -30,15 +56,11 @@ $lang = new Language();
                     <h2 class="white-font"><?php echo $lang->read('signin-area', $config->read('app','language')); ?></h2>
                     <form autocomplete="off" method="POST">
                         <div class="desc white-font"><i class="fa-regular fa-envelope"></i> <?php echo $lang->read('email', $config->read('app','language')); ?></div>
-                        <input class="normal-shadow white-font f400 f16"  type="email" >
+                        <input class="normal-shadow white-font f400 f16" name="username" type="email" >
                         <div class="desc white-font"><i class="fa-regular fa-pen-to-square"></i> <?php echo $lang->read('password', $config->read('app','language')); ?></div>
-                        <input class="normal-shadow white-font f400 f16" type="password">
+                        <input class="normal-shadow white-font f400 f16" name="password" type="password">
 
                         <div class="clear"></div>
-
-                        <div class="desc white-font"><i class="fa-regular fa-square-check"></i> CAPTCHA</div>
-                        <div class="h-captcha" data-sitekey="6b98beab-5dba-4311-ba57-c0ddc7fe6a68"></div>
-                        <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
                         <input class="log-green white-font normal-shadow f500 f16 no-top-bot"  type="submit" value="<?php echo $lang->read('signin', $config->read('app','language')); ?>">
                     </form>
@@ -50,13 +72,5 @@ $lang = new Language();
             </full-box>
             <div class="copyright white-font f300 f14"><?php echo $lang->read('copyright', $config->read('app','language')); ?></div>
         </div>
-        <script>
-            token = request.POST["h-captcha-response"]
-            params = {
-            "secret": "0x9a7be5Df907978dE1bFCbccc715941978E73a97e",
-            "response": token
-            }
-            json = http.POST("https://hcaptcha.com/siteverify", params)
-        </script>
     </body>
 </html>

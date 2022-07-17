@@ -37,8 +37,8 @@ class Language{
 			],
 			/* DASHBOARD */
 			'welcome' => [
-                'de' => 'Willkommen {USERNAME}!',
-				'en' => 'Welcome {USERNAME}!',
+                'de' => 'Willkommen',
+				'en' => 'Welcome',
             ],
             'welcome-sub' => [
                 'de' => 'Sie haben sich in KYC-AML-CHECK eingeloggt.',
@@ -139,6 +139,10 @@ class Language{
             'menu-home' => [
                 'de' => 'STARTSEITE',
                 'en' => 'HOME',
+            ],
+            'menu-logout' => [
+                'de' => 'AUSLOGGEN',
+                'en' => 'LOGOUT',
             ],
 		];
 		return $lang[$categorie][$sentence];

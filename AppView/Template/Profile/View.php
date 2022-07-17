@@ -8,6 +8,14 @@
 
 $config = new Config();
 $lang = new Language();
+$data = new Database($config->read('mysql','host'), $config->read('mysql','pass'), $config->read('mysql','user'), $config->read('mysql','data'));
+
+if(isset($_SESSION['login_algo'])){
+    $db = $data->getQuery("users", "id = '".$_SESSION['login_algo']."'");
+    $user = $db->fetchObject();
+} else {
+    header('location: /index');
+}
 
 ?>
 <html>
@@ -29,6 +37,7 @@ $lang = new Language();
                 <div class="kyc-full"><div class="logo f23 yellow-font">{LOGO}</div></div>
                 <action-tab data-action="umenu" data-json='[{"type":"dashboard"}]'><i class="fa-solid fa-house"></i> <?php echo $lang->read('menu-home', $config->read('app','language')); ?></action-tab>
                 <action-tab data-action="umenu" data-json='[{"type":"profile"}]'><i class="fa-regular fa-id-badge"></i> <?php echo $lang->read('menu-profile', $config->read('app','language')); ?></action-tab>
+                <action-tab data-action="umenu" data-json='[{"type":"logout"}]'><i class="fa-solid fa-door-open"></i> <?php echo $lang->read('menu-logout', $config->read('app','language')); ?></action-tab>
                 <div class="clear-sidebar"></div>
                 <section class="desc yellow-font"><i class="fa-regular fa-rectangle-list"></i> PLACEHOLDER</section>
                 <a href="#menu1"><under-section class="desc grey-font f15"><i class="fa-regular fa-circle-dot"></i> PLACEHOLDER 1</under-section></a>
@@ -49,43 +58,43 @@ $lang = new Language();
                         <head-title><?php echo $lang->read('account-info', $config->read('app','language')); ?><i class="fa-solid fa-pen-to-square"></i></head-title>
                         <data-box>
                             <div class="title yellow-font"><?php echo $lang->read('firstname', $config->read('app','language')); ?></div>
-                            <div class="data grey-font">Max</div>
+                            <div class="data grey-font"><?php echo htmlspecialchars($user->firstname); ?></div>
                         </data-box>
                         <data-box>
                             <div class="title yellow-font"><?php echo $lang->read('lastname', $config->read('app','language')); ?></div>
-                            <div class="data grey-font">Mustermann</div>
+                            <div class="data grey-font"><?php echo htmlspecialchars($user->lastname); ?></div>
                         </data-box>
                         <full-data-box>
                             <div class="title yellow-font"><?php echo $lang->read('emailadress', $config->read('app','language')); ?></div>
-                            <div class="data grey-font">maxmustermann@kyc-aml.com</div>
+                            <div class="data grey-font"><?php echo htmlspecialchars($user->email); ?></div>
                         </full-data-box>
                         <data-box>
                             <div class="title yellow-font"><?php echo $lang->read('nationality', $config->read('app','language')); ?></div>
-                            <div class="data grey-font">DE</div>
+                            <div class="data grey-font"><?php echo htmlspecialchars($user->nationality); ?></div>
                         </data-box>
                         <data-box>
                             <div class="title yellow-font"><?php echo $lang->read('lifecountry', $config->read('app','language')); ?></div>
-                            <div class="data grey-font">CH</div>
+                            <div class="data grey-font"><?php echo htmlspecialchars($user->country); ?></div>
                         </data-box>
                         <data-box>
                             <div class="title yellow-font"><?php echo $lang->read('zip', $config->read('app','language')); ?></div>
-                            <div class="data grey-font">0000</div>
+                            <div class="data grey-font"><?php echo htmlspecialchars($user->zip); ?></div>
                         </data-box>
                         <data-box>
                             <div class="title yellow-font"><?php echo $lang->read('city', $config->read('app','language')); ?></div>
-                            <div class="data grey-font">MusterCity</div>
+                            <div class="data grey-font"><?php echo htmlspecialchars($user->city); ?></div>
                         </data-box>
                         <full-data-box>
                             <div class="title yellow-font"><?php echo $lang->read('adress', $config->read('app','language')); ?></div>
-                            <div class="data grey-font">Mustermann Weg. 5</div>
+                            <div class="data grey-font"><?php echo htmlspecialchars($user->adress); ?></div>
                         </full-data-box>
                         <data-box>
                             <div class="title yellow-font"><?php echo $lang->read('birthday', $config->read('app','language')); ?></div>
-                            <div class="data grey-font">28.01.2000</div>
+                            <div class="data grey-font"><?php echo htmlspecialchars($user->birthday); ?></div>
                         </data-box>
                         <data-box>
                             <div class="title yellow-font"><?php echo $lang->read('age', $config->read('app','language')); ?></div>
-                            <div class="data grey-font">22</div>
+                            <div class="data grey-font"><?php echo htmlspecialchars($user->age); ?></div>
                         </data-box>
                     </full-box>
                 </rig-1-nopad2>

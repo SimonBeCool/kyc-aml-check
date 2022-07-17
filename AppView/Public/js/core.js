@@ -15,6 +15,7 @@ $(document).ready(function(){
         window.location.replace("./"+ link);
     });
 
+    /* ACTION TABS */
     $(document).on('click', '[data-action="test-switch"]', function(e) {
         console.log('activated/deactivated');
     });

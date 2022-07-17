@@ -11,10 +11,10 @@ class Config{
 	function read($main, $sub){
 		$config = [
 			'mysql' => [
-				'host' => 'localhost',
-				'pass' => 'mysql',
-				'user' => 'root',
-				'data' => 'animelab_'
+				'host' => '46.140.10.35',
+				'pass' => '49254975711780304925#',
+				'user' => 'kyc',
+				'data' => 'kyc_'
 			],
 			'routing' => [
 				'template' => './AppView/Template/',

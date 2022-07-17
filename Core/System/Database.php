@@ -34,5 +34,30 @@ class Database{
        $this->user   = null;
        $this->data   = null;
   }
+
+  public function getQuery($table, $where) {
+    $this->query = $this->db->prepare("SELECT * FROM ".$table." WHERE ".$where);
+    $this->query->execute();
+    return $this->query;
+    __destruct();   
+  }
+
+  public function insert($table){
+	  $this->query = $this->db->prepare("INSERT INTO ".$table);
+	  $this->query->execute();
+    __destruct();
+  }
+
+  public function update($table, $data){
+	  $this->query = $this->db->prepare("UPDATE ".$table." SET ".$data);
+	  $this->query->execute();
+    __destruct();
+  }
+
+  public function delete($table, $where){
+	  $this->query = $this->db->prepare("DELETE FROM ".$table." WHERE ".$where);
+    $this->query->execute();
+    __destruct();
+  }
 }
 ?>

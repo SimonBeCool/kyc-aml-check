@@ -8,6 +8,14 @@
 
 $config = new Config();
 $lang = new Language();
+$data = new Database($config->read('mysql','host'), $config->read('mysql','pass'), $config->read('mysql','user'), $config->read('mysql','data'));
+
+if(isset($_SESSION['login_algo'])){
+    $db = $data->getQuery("users", "id = '".$_SESSION['login_algo']."'");
+    $user = $db->fetchObject();
+} else {
+    header('location: /index');
+}
 
 ?>
 <html>
@@ -29,6 +37,7 @@ $lang = new Language();
                 <div class="kyc-full"><div class="logo f23 yellow-font">{LOGO}</div></div>
                 <action-tab data-action="umenu" data-json='[{"type":"dashboard"}]'><i class="fa-solid fa-house"></i> <?php echo $lang->read('menu-home', $config->read('app','language')); ?></action-tab>
                 <action-tab data-action="umenu" data-json='[{"type":"profile"}]'><i class="fa-regular fa-id-badge"></i> <?php echo $lang->read('menu-profile', $config->read('app','language')); ?></action-tab>
+                <action-tab data-action="umenu" data-json='[{"type":"logout"}]'><i class="fa-solid fa-door-open"></i> <?php echo $lang->read('menu-logout', $config->read('app','language')); ?></action-tab>
                 <div class="clear-sidebar"></div>
                 <section class="desc yellow-font"><i class="fa-regular fa-rectangle-list"></i> PLACEHOLDER</section>
                 <a href="#menu1"><under-section class="desc grey-font f15"><i class="fa-regular fa-circle-dot"></i> PLACEHOLDER 1</under-section></a>
@@ -41,7 +50,7 @@ $lang = new Language();
             </kyc-sidebar>
 
             <div class="kyc-main-normal">
-                <h2-dash class="white-font f23"><?php echo $lang->read('welcome', $config->read('app','language')); ?></h2-dash>
+                <h2-dash class="white-font f23"><?php echo $lang->read('welcome', $config->read('app','language')); ?> <?php echo htmlspecialchars($user->fullname); ?> !</h2-dash>
                 <h2-info class="grey-font f14"><i class="fa-solid fa-circle-info"></i> <?php echo $lang->read('welcome-sub', $config->read('app','language')); ?></h2-info>
                 <rig-3-nopad2>
                     <full-box class="lite-white normal-shadow white-font">

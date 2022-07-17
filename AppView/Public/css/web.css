@@ -1,6 +1,6 @@
 
 /* MAIN */
-body {background: #18242e !important;margin: 0 auto;font-family: 'Gemunu Libre';}
+body {background: #14151c !important;margin: 0 auto;font-family: 'Gemunu Libre';}
 /* width */
 ::-webkit-scrollbar {
     width: 0px;
@@ -109,7 +109,7 @@ img{filter: drop-shadow(5px 5px 10px #000);}
 
 /* Background Colors */
 .lite-white{background: #ffffff0f;}
-.log-green{background: #26313a;}
+.log-green{background: #5ff356}
 .lite-yellow{background: rgb(191 158 90)}
 
 /* Box Shadows */
@@ -121,7 +121,7 @@ img{filter: drop-shadow(5px 5px 10px #000);}
 .grey-font{color: #b1b1b1;text-shadow: 1px 1px 3px #000000d4;}
 
 /* INPUT */
-input {float: left;width: 100%;background: #00000054;height: 40px;border: 1px solid #ffffff1f;margin-top: 10px;margin-bottom: 10px;font-family: 'Gemunu Libre';padding: 0px 15px;}
+input {float: left;width: 100%;background: #00000054;height: 50px;border: 1px solid #ffffff1f;margin-top: 10px;margin-bottom: 10px;font-family: 'Gemunu Libre';padding: 0px 15px;}
 .no-top-bot{margin-top: 10px;margin-bottom: 0px;}
 
 /* Other */
