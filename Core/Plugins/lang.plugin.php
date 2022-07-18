@@ -12,12 +12,56 @@ class Language{
 		$lang = [
             /* TEXT'S */
             'email' => [
-				'de' => 'GEBE DEINE E-MAIL ADRESSE EIN',
-				'en' => 'INPUT YOU&apos;RE-MAIL ADRESS',
+				'de' => 'GEBEN SIE IHRE E-MAIL ADRESSE EIN',
+				'en' => 'INPUT YOUR E-MAIL ADRESS',
 			],
             'password' => [
-				'de' => 'GEBE DEIN PASSWORT EIN',
-				'en' => 'INPUT YOU&apos;RE PASSWORD',
+				'de' => 'GEBEN SIE IHR PASSWORT EIN',
+				'en' => 'INPUT YOURE PASSWORD',
+			],
+            'password-wdh' => [
+				'de' => 'GEBEN SIE IHR PASSWORT ERNEUT EIN',
+				'en' => 'REPEAT YOUR PASSWORD INPUT',
+			],
+            'investor-type' => [
+				'de' => 'Was für ein Investor sind Sie ?',
+				'en' => 'Which investor type are you ?',
+			],
+            'nationality-type' => [
+				'de' => 'Welche Nationalität haben Sie ?',
+				'en' => 'Which nationality do you have ?',
+			],
+            'country-type' => [
+				'de' => 'In welchem Land leben Sie gerade?',
+				'en' => 'In which country do you life ?',
+			],
+            'firstname-input' => [
+				'de' => 'Geben Sie Ihren Vornamen an.',
+				'en' => 'Input your firstname',
+			],
+            'lastname-input' => [
+				'de' => 'Geben Sie Ihren Nachname an.',
+				'en' => 'Input your lastname',
+			],
+            'born-input' => [
+				'de' => 'Wann sind Sie geboren',
+				'en' => 'When you are born ?',
+			],
+            'city-input' => [
+				'de' => 'Wie heißt ihr Wohnort',
+				'en' => 'In which city do you life ?',
+			],
+            'zip-code' => [
+				'de' => 'Geben Sie Ihre Postleitzahl an.',
+				'en' => 'Input your ZIP Code',
+			],
+            'adress-input' => [
+				'de' => 'Wie heißt Ihre Straße und Hausnummer ?.',
+				'en' => 'Input your Street-name and house-number',
+			],
+            'register-btn' => [
+				'de' => 'Ich möchte meinen Account erstellen.',
+				'en' => 'I want proceed the registration.',
 			],
             'signin-area' => [
 				'de' => 'ANMELDE BEREICH',
