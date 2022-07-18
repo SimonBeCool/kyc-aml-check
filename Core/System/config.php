@@ -11,9 +11,9 @@ class Config{
 	function read($main, $sub){
 		$config = [
 			'mysql' => [
-				'host' => '46.140.10.35',
-				'pass' => '49254975711780304925#',
-				'user' => 'kyc',
+				'host' => 'localhost',
+				'pass' => 'mysql',
+				'user' => 'root',
 				'data' => 'kyc_'
 			],
 			'routing' => [
@@ -28,7 +28,7 @@ class Config{
 				'images' => './AppView/Public/images/',
 				'title' => 'KYC-AML-CHECK | The nice way to proof files.',
 				'description' => 'KYC-AML-CHECK is a platform to proof files easy and fast.',
-				'language' => 'en',
+				'language' => 'de',
 			],
 		];
 		return $config[$main][$sub];

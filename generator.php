@@ -12,12 +12,12 @@
 <form method="POST">
     <input name="email" type="email" placeholder="email">
     <input name="password" type="password" placeholder="password">
-    <label for="customer">Choose a type:</label>
+    <label for="customer">choose a type:</label>
     <select name="customer" id="customer">
         <option value="INDI">Invidual</option>
         <option value="CORP">Corporation</option>
     </select>
-    <label for="nationality">Choose a nationality:</label>
+    <label for="nationality" class="f14">choose a nationality:</label>
     <select name="nationality" id="customer">
         <option value="DE">Germany</option>
         <option value="CH">Switzerland</option>

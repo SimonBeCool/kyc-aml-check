@@ -29,6 +29,7 @@ include $_SERVER['DOCUMENT_ROOT'].$config->read('routing','core').'route.class.p
 $routes = new routes();
 $routes->addRoute("", "/", $config->read('routing','template')."Login/View.php", true, true);
 $routes->addRoute("index", "/index", $config->read('routing','template')."Login/View.php", true, true);
+$routes->addRoute("quickregister", "/quickregister", $config->read('routing','template')."Register/View.php", true, true);
 $routes->addRoute("dashboard", "/dashboard", $config->read('routing','template')."Dashboard/View.php", true, true);
 $routes->addRoute("profile", "/profile", $config->read('routing','template')."Profile/View.php", true, true);
 $routes->addRoute("logout", "/logout", $config->read('routing','template')."Logout/View.php", true, true);
