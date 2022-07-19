@@ -16,8 +16,8 @@ $failure = null;
     <?php include './AppView/Template/Head/HeaderView.php'; ?>
     <body>
         <div class="kyc-main-normal">
-            <h2-dash class="white-font f23">IHRE PERSÖNLICHEN DATEN</h2-dash>
-            <h2-info class="grey-font f14"><i class="fa-solid fa-circle-info green-font"></i> <?php if($failure == null){ echo 'Geben Sie alle wichtigen Daten über Sie an.'; } else { echo $failure;} ?> </h2-info>
+            <h2-dash class="dark-font f23">IHRE PERSÖNLICHEN DATEN</h2-dash>
+            <h2-info class="dark-font f14"><i class="fa-solid fa-circle-info blue-font"></i> <?php if($failure == null){ echo 'Geben Sie alle wichtigen Daten über Sie an.'; } else { echo $failure;} ?> </h2-info>
             <full-box class="lite-white normal-shadow white-font">
             <?php
                 if(isset($_POST['email'], $_POST['password'], $_POST['password2'] /* $_POST['firstname'], $_POST['lastname'], $_POST['date'], $_POST['customer'], $_POST['nationality'], $_POST['zip'], $_POST['country'], $_POST['city'], $_POST['adress']*/)) {
@@ -61,22 +61,22 @@ $failure = null;
             ?>
             <form method="POST">
                 <rig-2-register>
-                    <div class="desc white-font f14 f600"><i class="fa-regular fa-envelope green-font"></i> <?php echo $lang->read('email', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-regular fa-envelope blue-font"></i> <?php echo $lang->read('email', $config->read('app','language')); ?></div>
                     <input name="email" class="white-font f14 f400" type="email">
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-fingerprint green-font"></i> <?php echo $lang->read('password', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-fingerprint blue-font"></i> <?php echo $lang->read('password', $config->read('app','language')); ?></div>
                     <input name="password" class="white-font f14 f400" type="password">
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-fingerprint green-font"></i> <?php echo $lang->read('password-wdh', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-fingerprint blue-font"></i> <?php echo $lang->read('password-wdh', $config->read('app','language')); ?></div>
                     <input name="password2" class="white-font f14 f400" type="password">
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-feather-pointed green-font"></i> <?php echo $lang->read('firstname-input', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-feather-pointed blue-font"></i> <?php echo $lang->read('firstname-input', $config->read('app','language')); ?></div>
                     <input name="firstname" class="white-font f14 f400" type="text">
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-calendar-days green-font"></i> <?php echo $lang->read('born-input', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-calendar-days blue-font"></i> <?php echo $lang->read('born-input', $config->read('app','language')); ?></div>
                     <input type="date" name="date" class="white-font f14 f400" required="required" autocomplete="off">
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-feather-pointed green-font"></i> <?php echo $lang->read('zip-code', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-feather-pointed blue-font"></i> <?php echo $lang->read('zip-code', $config->read('app','language')); ?></div>
                     <input name="zip" class="white-font f14 f400" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" type="text">
                 </rig-2-register>
                 <rig-2-register>
                     <rig-full>
-                        <div class="desc white-font f14 f600"><i class="fa-solid fa-boxes-stacked green-font"></i> <?php echo $lang->read('investor-type', $config->read('app','language')); ?></div>
+                        <div class="desc white-font f14 f600"><i class="fa-solid fa-boxes-stacked blue-font"></i> <?php echo $lang->read('investor-type', $config->read('app','language')); ?></div>
                         <div class="select">
                             <select name="customer" id="customer">
                                 <option>Wählen Sie Ihren Typ</option>
@@ -87,7 +87,7 @@ $failure = null;
                         </div>
                     </rig-full>
                     <rig-full>
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-globe green-font"></i> <?php echo $lang->read('nationality-type', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-globe blue-font"></i> <?php echo $lang->read('nationality-type', $config->read('app','language')); ?></div>
                         <div class="select">
                         <select name="nationality" class="f14">
                         <option><?php echo $lang->read('nationality-type', $config->read('app','language')); ?></option>
@@ -348,7 +348,7 @@ $failure = null;
                     </div>
                     </rig-full>
                     <rig-full>
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-globe green-font"></i> <?php echo $lang->read('country-type', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-globe blue-font"></i> <?php echo $lang->read('country-type', $config->read('app','language')); ?></div>
                         <div class="select">
                         <select name="country" class="f14">
                         <option><?php echo $lang->read('country-type', $config->read('app','language')); ?></option>
@@ -609,16 +609,16 @@ $failure = null;
                     </div>
                     </rig-full>
                     <rig-full>
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-feather-pointed green-font"></i> <?php echo $lang->read('lastname-input', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-feather-pointed blue-font"></i> <?php echo $lang->read('lastname-input', $config->read('app','language')); ?></div>
                     <input name="lastname" class="white-font f14 f400" type="text">
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-feather-pointed green-font"></i> <?php echo $lang->read('city-input', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-feather-pointed blue-font"></i> <?php echo $lang->read('city-input', $config->read('app','language')); ?></div>
                     <input name="city" class="white-font f14 f400" type="text">
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-feather-pointed green-font"></i> <?php echo $lang->read('adress-input', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-feather-pointed blue-font"></i> <?php echo $lang->read('adress-input', $config->read('app','language')); ?></div>
                     <input name="adress" class="white-font f14 f400" type="text">
                     </rig-full>
                 </rig-2-register>
                 <rig-2-register>
-                    <input class="log-green white-font normal-shadow f500 f14 no-top-bot" type="submit" value="<?php echo $lang->read('register-btn', $config->read('app','language')); ?>">
+                    <input class="lite-blue white-font normal-shadow f500 f14 no-top-bot" type="submit" value="<?php echo $lang->read('register-btn', $config->read('app','language')); ?>">
                 </rig-2-register>
             </form>
             </full-box>
