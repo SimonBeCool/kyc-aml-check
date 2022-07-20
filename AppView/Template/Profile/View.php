@@ -40,8 +40,7 @@ if(isset($_SESSION['login_algo'])){
 
             <div class="kyc-main-normal">
                 <h2-dash class="dark-font f23 f700"><?php echo $lang->read('profile-text', $config->read('app','language')); ?></h2-dash>
-                <h2-info class="dark-font f15 f600"><i class="fa-solid fa-circle-info blue-font"></i> <?php echo $lang->read('profile-text-sub', $config->read('app','language')); ?></h2-info>
-                
+                <div class="clear"></div>
                 <rig-1-nopad2>
                     <full-box class="lite-white normal-shadow white-font">
                         <head-title class="f500 f16"><?php echo $lang->read('account-info', $config->read('app','language')); ?><i class="fa-solid fa-pen-to-square blue-font"></i></head-title>

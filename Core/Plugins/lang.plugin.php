@@ -12,16 +12,16 @@ class Language{
 		$lang = [
             /* TEXT'S */
             'email' => [
-				'de' => 'GEBEN SIE IHRE E-MAIL ADRESSE EIN',
-				'en' => 'INPUT YOUR E-MAIL ADRESS',
+				'de' => 'Geben Sie ihre E-Mail Adresse ein.',
+				'en' => 'Your e-mail adress',
 			],
             'password' => [
-				'de' => 'GEBEN SIE IHR PASSWORT EIN',
-				'en' => 'INPUT YOURE PASSWORD',
+				'de' => 'Geben Sie ihr Passwort ein.',
+				'en' => 'Your password',
 			],
             'password-wdh' => [
-				'de' => 'GEBEN SIE IHR PASSWORT ERNEUT EIN',
-				'en' => 'REPEAT YOUR PASSWORD INPUT',
+				'de' => 'Geben Sie ihr Passwort erneut ein.',
+				'en' => 'Repeat your password',
 			],
             'investor-type' => [
 				'de' => 'Was für ein Investor sind Sie ?',
@@ -37,15 +37,15 @@ class Language{
 			],
             'firstname-input' => [
 				'de' => 'Geben Sie Ihren Vornamen an.',
-				'en' => 'Input your firstname',
+				'en' => 'Your firstname',
 			],
             'lastname-input' => [
 				'de' => 'Geben Sie Ihren Nachname an.',
-				'en' => 'Input your lastname',
+				'en' => 'Your lastname',
 			],
             'born-input' => [
 				'de' => 'Wann sind Sie geboren',
-				'en' => 'When you are born ?',
+				'en' => 'When were you born ?',
 			],
             'city-input' => [
 				'de' => 'Wie heißt ihr Wohnort',
@@ -53,15 +53,15 @@ class Language{
 			],
             'zip-code' => [
 				'de' => 'Geben Sie Ihre Postleitzahl an.',
-				'en' => 'Input your ZIP Code',
+				'en' => 'Your ZIP Code',
 			],
             'adress-input' => [
 				'de' => 'Wie heißt Ihre Straße und Hausnummer ?.',
-				'en' => 'Input your Street-name and house-number',
+				'en' => 'Your Street-name and house-number',
 			],
             'register-btn' => [
 				'de' => 'Ich möchte meinen Account erstellen.',
-				'en' => 'I want proceed the registration.',
+				'en' => 'I wish to proceed with the registration.',
 			],
             'signin-area' => [
 				'de' => 'ANMELDE BEREICH',
@@ -69,7 +69,7 @@ class Language{
 			],
 			'signup' => [
 				'de' => 'REGISTRIERE DICH AUF KYC-ALM-CHECK',
-				'en' => 'SIGN UP ON KYC-ALM-CHECK',
+				'en' => 'SIGN UP FOR KYC-ALM-CHECK',
 			],
             'signin' => [
 				'de' => 'ANMELDEN',
@@ -79,14 +79,22 @@ class Language{
 				'de' => '© KYC-AML_CHECK 2022 von Simon Bucher',
 				'en' => '© KYC-AML_CHECK 2022 by Simon Bucher',
 			],
+            'register-header' => [
+				'de' => 'IHRE PERSÖNLICHEN DATEN',
+				'en' => 'YOUR PERSONALITY DATA',
+			],
+            'back-login' => [
+				'de' => 'Zurück zur Anmeldung',
+				'en' => 'Back to sign-in area',
+			],
 			/* DASHBOARD */
 			'welcome' => [
-                'de' => 'Willkommen',
+                		'de' => 'Willkommen',
 				'en' => 'Welcome',
             ],
             'welcome-sub' => [
                 'de' => 'Sie haben sich in KYC-AML-CHECK eingeloggt.',
-                'en' => 'You&apos;ve logged in to KYC-AML-CHECK.',
+                'en' => 'You ve logged on to KYC-AML-CHECK.',
             ],
 			'total-investors' => [
                 'de' => 'INVESTOREN INSGESAMT',

@@ -20,6 +20,28 @@ $(document).ready(function(){
         console.log('activated/deactivated');
     });
 
+
+    /* REGISTER SWITCH */
+    $('[data-action="reg-box"]').on("change", function(e) {
+        var val = $(this).val();
+        switch (val)
+        {
+            case "INDI":
+                $('.indi').text("YOUR PERSONAL DATA");
+                $('.indi-box').empty();
+                $.get('http://localhost/Core/Plugins/registerbox.plugin.php?i=' + val, function(data) {
+                    $('.indi-box').html(data);
+                });
+                $('.indi').css({ display: "block" });
+                $('.indi-box').css({ display: "block" });
+                break;
+
+            case "CORP":
+                $('.indi').text("YOUR COMPANY DATA");
+                $('.indi').css({ display: "block" });
+                break;
+        }
+    });
 });
 
 	
