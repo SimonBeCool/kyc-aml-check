@@ -33,6 +33,9 @@ $routes->addRoute("quickregister", "/quickregister", $config->read('routing','te
 $routes->addRoute("dashboard", "/dashboard", $config->read('routing','template')."Dashboard/View.php", true, true);
 $routes->addRoute("profile", "/profile", $config->read('routing','template')."Profile/View.php", true, true);
 $routes->addRoute("logout", "/logout", $config->read('routing','template')."Logout/View.php", true, true);
+$routes->addRoute("error", "/error", $config->read('routing','template')."404/View404.php", true, true);
+$routes->addRoute("noentry", "/noentry", $config->read('routing','template')."404/ViewNoEntry.php", true, true);
+
 
 
 // PROCEED OR ERROR HANDLER
@@ -40,5 +43,5 @@ if(!empty($_GET) && isset($_GET['page'])) {
     trim('/', ($page = $_GET['page']));
     $routes->proceed('/' . $page);
 } else {
-    die('Lol - 404');
+    header('location:  /error');
 }

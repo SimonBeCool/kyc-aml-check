@@ -6,11 +6,22 @@
 
 */
 
+class Register{
+    function RegisterIndividualACC($email, $password, $password2, $firstname, $lastname, $date, $customer, $nationality, $zip, $country, $city, $adress, $age){
+
+    }
+    function RegisterCompanyACC($email, $password, $password2, $company_form, $company_name, $founding_date, $company_nation, $company_zip, $country, $company_city, $company_adress, $company_contact, $contact_email){
+
+    }
+}
+
+
 $config = new Config();
 $lang = new Language();
 $data = new Database($config->read('mysql','host'), $config->read('mysql','pass'), $config->read('mysql','user'), $config->read('mysql','data'));
-$failure = null;
-
+$failure_empty = null;
+$failure_pass = null;
+$failure_email = null;
 ?>
 <html>
     <?php include './AppView/Template/Head/HeaderView.php'; ?>
@@ -21,9 +32,9 @@ $failure = null;
             <a href="/"><h2-info class="dark-font f14 blue-font"><i class="fa-solid fa-chevron-left blue-font"></i> <?php echo $lang->read('back-login', $config->read('app','language')); ?> </h2-info></a>
             <full-box class="lite-white normal-shadow white-font">
             <?php
-                if(isset($_POST['email'], $_POST['password'], $_POST['password2'] /* $_POST['firstname'], $_POST['lastname'], $_POST['date'], $_POST['customer'], $_POST['nationality'], $_POST['zip'], $_POST['country'], $_POST['city'], $_POST['adress']*/)) {
-                    if (empty($_POST['email']) && empty($_POST['password']) && empty($_POST['password2']) /* && empty($_POST['firstname']) && empty($_POST['lastname']) && empty($_POST['date']) && empty($_POST['customer']) && empty($_POST['nationality']) && empty($_POST['zip']) && empty($_POST['country']) && empty($_POST['city']) && empty($_POST['adress'])*/) {
-                        echo '<div class="alert">Bitte f&uuml;lle alle Felder aus!</div>';
+                if(isset($_POST['email'], $_POST['password'], $_POST['password2'],  $_POST['firstname'], $_POST['lastname'], $_POST['date'], $_POST['customer'], $_POST['nationality'], $_POST['zip'], $_POST['country'], $_POST['city'], $_POST['adress'])) {
+                    if (empty($_POST['email']) && empty($_POST['password']) && empty($_POST['password2'])  && empty($_POST['firstname']) && empty($_POST['lastname']) && empty($_POST['date']) && empty($_POST['customer']) && empty($_POST['nationality']) && empty($_POST['zip']) && empty($_POST['country']) && empty($_POST['city']) && empty($_POST['adress'])) {
+                        $failure_empty = '<div class="alert"><i class="fa-solid fa-person-circle-exclamation"></i> Bitte f&uuml;lle alle Felder aus!</div>';
                     } else {
                         $email = htmlspecialchars($_POST['email']);
                         $password = htmlspecialchars($_POST['password']);
@@ -40,7 +51,6 @@ $failure = null;
                         $today = date("Y-m-d");
                         $age = date_diff(date_create($date), date_create($today));
     
-
                         $stage1 = $data->check("users", "email = '".htmlspecialchars($email)."'"); 
                         if($stage1 == 0){
                             if(htmlspecialchars($password) == htmlspecialchars($password2)){
@@ -51,19 +61,19 @@ $failure = null;
                                 header('Location: /dashboard');
                             } else {
                                 // PASSWORD IS NOT THE SAME
-                                $failure = 'test 1';
+                                $failure_pass = '| <i class="fa-solid fa-person-circle-exclamation yellow-font" style="margin-top: -5px;"></i> Password is not the same';
                             }
                         } else {
                             // MORE THEN 0 ACCOUNTS WITH THIS E-MAIL
-                            $failure = 'test 2';
+                            $failure_email = '| <i class="fa-solid fa-person-circle-exclamation yellow-font" style="margin-top: -5px;"></i> this e-mail is already taken';
                         }
                     }
                 }
             ?>
                 <rig-2-register>
-                    <div class="desc white-font f14 f600"><i class="fa-regular fa-envelope blue-font"></i> <?php echo $lang->read('email', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-regular fa-envelope blue-font"></i> <?php echo $lang->read('email', $config->read('app','language')); ?> <?php if ($failure_email != null){ echo $failure_email;} ?></div>
                     <input name="email" class="white-font f14 f400" type="email">
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-fingerprint blue-font"></i> <?php echo $lang->read('password', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-fingerprint blue-font"></i> <?php echo $lang->read('password', $config->read('app','language')); ?>  <?php if ($failure_pass != null){ echo $failure_pass;} ?></div>
                     <input name="password" class="white-font f14 f400" type="password">
                 </rig-2-register>
                 
@@ -79,7 +89,7 @@ $failure = null;
                             <div class="select_arrow"></div>
                         </div>
                     </rig-full>
-                    <div class="desc white-font f14 f600"><i class="fa-solid fa-fingerprint blue-font"></i> <?php echo $lang->read('password-wdh', $config->read('app','language')); ?></div>
+                    <div class="desc white-font f14 f600"><i class="fa-solid fa-fingerprint blue-font"></i> <?php echo $lang->read('password-wdh', $config->read('app','language')); ?>  <?php if ($failure_pass != null){ echo $failure_pass;} ?></div>
                     <input name="password2" class="white-font f14 f400" type="password">
                 </rig-2-register>
             </full-box>
@@ -87,6 +97,14 @@ $failure = null;
             <h2-dash class="indi dark-font f23" style="display:none;">YOUR PERSONAL DATA</h2-dash>
             <div class="clear"></div>
             <full-box class="indi-box lite-white normal-shadow white-font" style="display: none;">
+                <!---- NOW RECALL WITH AJAX WORKS ---->
+            </full-box>
+            <full-box class="corp-box lite-white normal-shadow white-font" style="display: none;">
+                <!---- NOW RECALL WITH AJAX WORKS ---->
+            </full-box>
+            
+            <h2-dash class="invest-title dark-font f23" style="display:none;">INVEST</h2-dash>
+            <full-box class="invest-box lite-white normal-shadow white-font" style="display: none;">
                 <!---- NOW RECALL WITH AJAX WORKS ---->
             </full-box>
 

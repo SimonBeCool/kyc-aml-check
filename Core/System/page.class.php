@@ -62,9 +62,9 @@ class Page extends BitwiseFlag
     {
 
       if(!$this->isFlagSet(self::PAGE_PRESENT))
-          die('Die Seite wurde aus Sicherheitsgründen gesperrt');
+            header('location:  /noentry');
       if(!$this->isFlagSet(self::PAGE_EXECUTABLE))
-          die('Die Seite ist für niemand einsehbar');
+            header('location:  /noentry');
 
       include $this->buffer;
       exit(0);

@@ -37,7 +37,7 @@ class routes
         }
         else {
             http_response_code(404);
-            die('Seite nicht gefunden?!');
+            header('location:  /error');
         }
     }
 }

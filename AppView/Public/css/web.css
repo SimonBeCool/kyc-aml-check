@@ -71,6 +71,7 @@ h2-info{float: left;width: 100%;font-weight: 500;margin-top: 5px;margin-bottom: 
 h2-info > i{position: relative;margin-right: 10px;}
 .desc{font-size: 16px;float: left;width: 100%;}
 .desc > i{position: relative;margin-right: 10px;top: 1px;}
+.f13{font-size: 13px;}
 .f14{font-size: 14px;}
 .f15{font-size: 15px;}
 .f16{font-size: 16px;}
@@ -179,6 +180,21 @@ input {float: left;width: 100%;background: #282828;height: 50px;border: 1px soli
 .toggle__input:checked ~ .toggle__fill::after {
   transform: translateX(var(--height));
 }
+.speichern{float:left;margin-bottom: 34px;margin-top: 15px;width: 738px;background: #786bfb;height: 40px;cursor: pointer;}
+.custom-file-upload {
+  border: 1px solid #424242;
+  display: inline-block;
+  padding: 15px 0px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+input[type="file"] {
+  display: none;
+}
+input[type="file" i] {color: 000;}
 .select {
   position: relative;
   display: inline-block;
